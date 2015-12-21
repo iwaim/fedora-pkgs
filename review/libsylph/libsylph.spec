@@ -1,13 +1,14 @@
 Name:           libsylph
 Summary:        E-Mail client library
 Version:        1.1.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        LGPLv2.1+
 
 URL:            http://sylpheed.sraoss.jp/en/
 Source0:        http://sylpheed.sraoss.jp/sylpheed/libsylph/%{name}-%{version}.tar.bz2
 Patch0:         libsylph-1.1.0-glib-header.patch
 BuildRequires:  glib2-devel >= 2.4.0
+BuildRequires:  gettext
 
 %description
 LibSylph is an e-mail client library which is derived from Sylpheed.
@@ -29,8 +30,8 @@ developing applications that use %{name}.
 %patch0 -p1 -b .glibheader
 
 %build
-%configure --enable-shared --disable-static
-make
+%configure --enable-shared --disable-static --disable-rpath
+make %{?_smp_mflags}
 
 %install
 %{__rm} -rf %{buildroot}
@@ -55,6 +56,11 @@ make check
 %{_libdir}/*.so
 
 %changelog
+* Mon Dec 21 2015 IWAI, Masaharu <iwaim.sub@gmail.com> - 1.1.0-2
+- add BuildRequires: gettext
+- add '--disable-rpath'
+- add %%{?_smp_mflags} for make
+
 * Mon Dec  7 2015 IWAI, Masaharu <iwaim.sub@gmail.com> - 1.1.0-1
 - initial build for Fedora
 
