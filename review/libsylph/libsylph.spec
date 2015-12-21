@@ -1,5 +1,5 @@
 Name:           libsylph
-Summary:       	E-Mail client library
+Summary:        E-Mail client library
 Version:        1.1.0
 Release:        1%{?dist}
 License:        LGPLv2.1+
@@ -7,7 +7,7 @@ License:        LGPLv2.1+
 URL:            http://sylpheed.sraoss.jp/en/
 Source0:        http://sylpheed.sraoss.jp/sylpheed/libsylph/%{name}-%{version}.tar.bz2
 Patch0:         libsylph-1.1.0-glib-header.patch
-BuildRequires: 	glib2-devel >= 2.4.0
+BuildRequires:  glib2-devel >= 2.4.0
 
 %description
 LibSylph is an e-mail client library which is derived from Sylpheed.
@@ -17,8 +17,8 @@ your application. Moreover you can create a new e-mail client by wrapping
 LibSylph with any UI.
 
 %package devel
-Summary:         Development files for %{name}
-Requires:        %{name}%{?_isa} = %{version}-%{release}
+Summary:        Development files for %{name}
+Requires:       %{name}%{?_isa} = %{version}-%{release}
 
 %description devel
 The %{name}-devel package contains libraries and header files for
