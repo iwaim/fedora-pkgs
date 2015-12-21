@@ -2,7 +2,7 @@ Name:           libsylph
 Summary:        E-Mail client library
 Version:        1.1.0
 Release:        2%{?dist}
-License:        LGPLv2.1+
+License:        LGPLv2+
 
 URL:            http://sylpheed.sraoss.jp/en/
 Source0:        http://sylpheed.sraoss.jp/sylpheed/libsylph/%{name}-%{version}.tar.bz2
@@ -56,10 +56,11 @@ make check
 %{_libdir}/*.so
 
 %changelog
-* Mon Dec 21 2015 IWAI, Masaharu <iwaim.sub@gmail.com> - 1.1.0-2
+* Tue Dec 22 2015 IWAI, Masaharu <iwaim.sub@gmail.com> - 1.1.0-2
 - add BuildRequires: gettext
 - add '--disable-rpath'
 - add %%{?_smp_mflags} for make
+- update License tag value; use Short Name for Fedora
 
 * Mon Dec  7 2015 IWAI, Masaharu <iwaim.sub@gmail.com> - 1.1.0-1
 - initial build for Fedora
