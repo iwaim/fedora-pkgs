@@ -7,7 +7,7 @@
 %global debug_package   %{nil}
 %endif
 
-Summary: a go port of setlock (an utility of daemontools)
+Summary: A go port of setlock (an utility of daemontools)
 Name: setlock
 Version: 1.3.0
 Release: 1%{?dist}
@@ -43,7 +43,8 @@ go test
 
 %files
 %defattr(-,root,root)
-%doc LICENSE README.md
+%license LICENSE
+%doc README.md
 %{_bindir}/setlock
 
 %changelog
