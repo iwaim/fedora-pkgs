@@ -1,0 +1,12 @@
+diff -uNr go-setlock-1.3.0.orig/cmd/setlock/setlock.go go-setlock-1.3.0/cmd/setlock/setlock.go
+--- go-setlock-1.3.0.orig/cmd/setlock/setlock.go	2015-08-25 00:08:54.000000000 +0900
++++ go-setlock-1.3.0/cmd/setlock/setlock.go	2016-11-21 14:14:29.830526146 +0900
+@@ -6,7 +6,7 @@
+ 	"os"
+ 	"os/exec"
+ 
+-	"github.com/moznion/go-setlock"
++	"./../../"
+ )
+ 
+ const (

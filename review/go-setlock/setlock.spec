@@ -7,7 +7,7 @@
 %global debug_package   %{nil}
 %endif
 
-Summary: a go port of setlock (an utility of daemontools)
+Summary: A go port of setlock (an utility of daemontools)
 Name: setlock
 Version: 1.3.0
 Release: 1%{?dist}
@@ -25,8 +25,6 @@ go-setlock is a go port of setlock (an utility of daemontools).
 %prep
 %setup -q -n go-%{name}-%{version}
 %patch0 -p1 -b .libpath
-%{__mkdir_p} go-setlock
-%{__cp} locker* go-setlock
 
 %build
 go build cmd/setlock/setlock.go
@@ -43,7 +41,8 @@ go test
 
 %files
 %defattr(-,root,root)
-%doc LICENSE README.md
+%license LICENSE
+%doc README.md
 %{_bindir}/setlock
 
 %changelog
