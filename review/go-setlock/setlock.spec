@@ -25,8 +25,6 @@ go-setlock is a go port of setlock (an utility of daemontools).
 %prep
 %setup -q -n go-%{name}-%{version}
 %patch0 -p1 -b .libpath
-%{__mkdir_p} go-setlock
-%{__cp} locker* go-setlock
 
 %build
 go build cmd/setlock/setlock.go
